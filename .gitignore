@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# 虚拟环境
+venv/
+.venv/
+env/
+.env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 日志
+logs/
+
+# 输出文件（跟踪目录但不跟踪文件内容）
+output/*.md
+
+# 数据文件（本地生成）
+data/*.json
+
+# HTML 输出
+dist/*.html
+
+# 文档输出
+docs/index.html
+docs/history.html
+
+# 环境变量
+.env
+.env.local
+
+# macOS
+.DS_Store
+
+# 临时文件
+*.tmp
+*.bak
