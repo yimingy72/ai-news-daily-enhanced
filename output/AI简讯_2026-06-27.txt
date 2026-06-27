@@ -2,44 +2,46 @@
 🤖 AI 简讯日报
 
   1、[英] OpenAI News
-  2、[英] Extrinsic Hallucinations in LLMs
-  3、[英] Thinking about High-Quality Human Data
-  4、[英] Scaling Laws, Carefully
-  5、一口气端出三款GPT 5.6系列模型
-  6、作者｜黄楠 编辑｜袁斯来 6月25日，G7易流发布货运行业首款穿戴式AI硬件“拍拍豆”。
-  7、[英] Fei-Fei Li
-  8、[英] Michiel van de Panne
-  9、两个月连获两轮数亿元融资 深度机智以全栈自主路线加速国产物理AI基座模型落地
-  10、[英] OpenAI’s Jalapeño chip is Big Tech’s spiciest move away from Nvidia
+  2、[英] Fluid, natural voice translation with Gemini 3.5 Live Translate
+  3、[英] Scaling Laws, Carefully
+  4、[英] Porting the Moebius 0.2B image inpainting model to run in the browser with Claud
+  5、2026年6月26日，乐奇Rokid Open Day生态及开发者大会举行。
+  6、[英] GLM-5.2 is probably the most powerful text-only open weights LLM
+  7、[英] Michiel van de Panne
+  8、[英] Asian AI startups launch Mythos-like models as Anthropic’s export ban drags on
+  9、作者｜黄楠 编辑｜袁斯来 6月25日，G7易流发布货运行业首款穿戴式AI硬件“拍拍豆”。
+  10、雷峰网获悉，6月24日，通用具身智能企业RoboScience机器科学在深圳成功举办通用具身大模型发布会。
+  11、[英] The White House is asking OpenAI to slow roll the release of its new model over 
+  12、[英] Introducing Mistral OCR 4
 🤖 本周十大 GitHub 热门项目
 
-  1、calesthio/OpenMontage  [Python] 总⭐23,812 周增⭐17,249
+  1、calesthio/OpenMontage  [Python] 总⭐24,520 周增⭐17,249
   World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills.
 
-  2、DeusData/codebase-memory-mcp  [C] 总⭐15,847 周增⭐7,592
+  2、DeusData/codebase-memory-mcp  [C] 总⭐16,447 周增⭐7,592
   High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph 
 
-  3、BuilderIO/agent-native  [TypeScript] 总⭐2,565 周增⭐1,569
-  A framework for building agent-native applications.
-
-  4、kunchenguid/no-mistakes  [Go] 总⭐3,501 周增⭐1,744
+  3、kunchenguid/no-mistakes  [Go] 总⭐3,681 周增⭐1,744
   git push no-mistakes
 
-  5、penpot/penpot  [Clojure] 总⭐53,986 周增⭐3,560
-  Penpot: The open-source design tool for design and code collaboration
+  4、google-labs-code/design.md  [TypeScript] 总⭐21,975 周增⭐4,618
+  A format specification for describing a visual identity to coding agents.
 
-  6、ZhuLinsen/daily_stock_analysis  [Python] 总⭐50,171 周增⭐6,919
+  5、ZhuLinsen/daily_stock_analysis  [Python] 总⭐50,349 周增⭐6,919
   LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time 
 
-  7、jamiepine/voicebox  [TypeScript] 总⭐34,545 周增⭐3,819
-  The open-source AI voice studio. Clone, dictate, create.
+  6、penpot/penpot  [Clojure] 总⭐54,089 周增⭐3,560
+  Penpot: The open-source design tool for design and code collaboration
 
-  8、Panniantong/Agent-Reach  [Python] 总⭐42,499 周增⭐7,199
+  7、Panniantong/Agent-Reach  [Python] 总⭐43,024 周增⭐7,199
   Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu 
 
-  9、koala73/worldmonitor  [TypeScript] 总⭐60,153 周增⭐3,170
-  Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified 
+  8、interviewstreet/hiring-agent  [Python] 总⭐2,978 周增⭐1,727
+  AI agent to evaluate and score resumes.
 
-  10、stablyai/orca  [TypeScript] 总⭐7,961 周增⭐2,398
-  Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription.
+  9、JCodesMore/ai-website-cloner-template  [TypeScript] 总⭐21,772 周增⭐3,906
+  Clone any website with one command using AI coding agents
+
+  10、jamiepine/voicebox  [TypeScript] 总⭐34,681 周增⭐3,819
+  The open-source AI voice studio. Clone, dictate, create.
 
