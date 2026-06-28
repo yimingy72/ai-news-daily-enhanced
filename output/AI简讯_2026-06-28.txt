@@ -1,0 +1,47 @@
+06月28日，农历六月十四，星期日
+🤖 AI 简讯日报
+
+  1、[英] OpenAI News
+  2、[英] Fluid, natural voice translation with Gemini 3.5 Live Translate
+  3、[英] Director of AI at Tesla
+  4、[英] Scaling Laws, Carefully
+  5、[英] Michiel van de Panne
+  6、[英] Porting the Moebius 0.2B image inpainting model to run in the browser with Claud
+  7、[英] Essays
+  8、[英] GLM-5.2 is probably the most powerful text-only open weights LLM
+  9、[英] The fittest founder in the room got cancer. Here’s how he used AI to fight back.
+  10、2026年6月26日，乐奇Rokid Open Day生态及开发者大会举行。
+  11、[英] Introducing Search Toolkit
+  12、[英] Vibe gets to work.
+🤖 本周十大 GitHub 热门项目
+
+  1、calesthio/OpenMontage  [Python] 总⭐25,484 周增⭐18,000
+  World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills.
+
+  2、DeusData/codebase-memory-mcp  [C] 总⭐17,903 周增⭐7,674
+  High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph 
+
+  3、kunchenguid/no-mistakes  [Go] 总⭐3,840 周增⭐2,229
+  git push no-mistakes
+
+  4、google-labs-code/design.md  [TypeScript] 总⭐22,432 周增⭐6,014
+  A format specification for describing a visual identity to coding agents.
+
+  5、ZhuLinsen/daily_stock_analysis  [Python] 总⭐50,623 周增⭐7,137
+  LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time 
+
+  6、penpot/penpot  [Clojure] 总⭐54,230 周增⭐3,343
+  Penpot: The open-source design tool for design and code collaboration
+
+  7、Panniantong/Agent-Reach  [Python] 总⭐43,602 周增⭐7,676
+  Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu 
+
+  8、interviewstreet/hiring-agent  [Python] 总⭐3,065 周增⭐1,836
+  AI agent to evaluate and score resumes.
+
+  9、JCodesMore/ai-website-cloner-template  [TypeScript] 总⭐22,209 周增⭐4,565
+  Clone any website with one command using AI coding agents
+
+  10、jamiepine/voicebox  [TypeScript] 总⭐34,977 周增⭐3,965
+  The open-source AI voice studio. Clone, dictate, create.
+
