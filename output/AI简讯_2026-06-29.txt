@@ -1,0 +1,47 @@
+06月29日，农历六月十五，星期一
+🤖 AI 简讯日报
+
+  1、今日热点导览 《给阿嬷的情书》总票房已突破19亿元 梁文锋署名，DeepSeek发布最新论文 WPS回应C盘占用问题，即将更新七月版本上线磁盘存储管理功能 触屏
+  2、[英] Introducing computer use in Gemini 3.5 Flash
+  3、[英] OpenAI News
+  4、[英] Michiel van de Panne
+  5、[英] Porting the Moebius 0.2B image inpainting model to run in the browser with Claud
+  6、[英] Extrinsic Hallucinations in LLMs
+  7、[英] Thinking about High-Quality Human Data
+  8、[英] Scaling Laws, Carefully
+  9、[英] Securing the future of AI agents
+  10、要闻提示1.奔驰推迟9万德国员工年终奖金，拟增加无薪加班工时2.传苹果游说美国政府，寻求采购长鑫存储内存芯片3.梁文锋署名，DeepSeek发布最新论文4.腾讯
+  11、[英] GLM-5.2 is probably the most powerful text-only open weights LLM
+  12、[英] Internalizing the Future: A Unified Agentic Training Paradigm for World Model Pl
+🤖 本周十大 GitHub 热门项目
+
+  1、calesthio/OpenMontage  [Python] 总⭐27,325 周增⭐18,703
+  World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills.
+
+  2、DeusData/codebase-memory-mcp  [C] 总⭐20,080 周增⭐8,926
+  High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph 
+
+  3、kunchenguid/no-mistakes  [Go] 总⭐4,117 周增⭐2,449
+  git push no-mistakes
+
+  4、palmier-io/palmier-pro  [Swift] 总⭐9,336 周增⭐5,034
+  macOS video editor built for AI
+
+  5、google-labs-code/design.md  [TypeScript] 总⭐22,930 周增⭐6,728
+  A format specification for describing a visual identity to coding agents.
+
+  6、JCodesMore/ai-website-cloner-template  [TypeScript] 总⭐23,043 周增⭐5,317
+  Clone any website with one command using AI coding agents
+
+  7、simplex-chat/simplex-chat  [Haskell] 总⭐15,303 周增⭐3,218
+  SimpleX - the first messaging network operating without user identifiers of any kind - 100% private by design! iOS, Android and desktop 
+
+  8、interviewstreet/hiring-agent  [Python] 总⭐3,211 周增⭐1,973
+  AI agent to evaluate and score resumes.
+
+  9、ZhuLinsen/daily_stock_analysis  [Python] 总⭐51,275 周增⭐7,045
+  LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time 
+
+  10、stablyai/orca  [TypeScript] 总⭐8,716 周增⭐2,769
+  Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription.
+
