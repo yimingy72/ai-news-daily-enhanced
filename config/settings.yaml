@@ -1,9 +1,6 @@
 # ============================================
 #  AI 简讯增强版 — 全局配置文件
 # ============================================
-#  环境变量覆盖: NEWS_ 前缀 + 双下划线点号路径
-#  示例: NEWS_SCHEDULE__MORNING_HOUR=9 → schedule.morning_hour=9
-# ============================================
 
 schedule:
   morning_hour: 8
@@ -16,25 +13,17 @@ output:
   dir: "./output"
   data_dir: "./data"
   filename_format: "AI简讯_{date}.md"
-  append_if_exists: true
 
-# 📡 数据源配置（共 29 个源：18 RSS + 11 Web）
 sources:
   request_timeout: 30
   max_articles_per_source: 15
   user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 
   # ============================================
-  #  RSS 订阅源（18 个）
+  #  RSS 订阅源（22 个）
   # ============================================
   rss_feeds:
     # ── 🇨🇳 国内 AI 媒体 ──
-    - name: "机器之心 (Synced)"
-      url: "https://syncedreview.com/feed/"
-      category: "chinese_ai"
-      enabled: true
-      type: "rss"
-
     - name: "量子位"
       url: "https://www.qbitai.com/feed"
       category: "chinese_ai"
@@ -59,10 +48,43 @@ sources:
       enabled: true
       type: "rss"
 
-    - name: "InfoQ AI"
-      url: "https://www.infoq.cn/feed/ai"
-      category: "chinese_ai"
-      enabled: false  # 451 geo-blocked on GitHub Actions, keep for local
+    # ── 🏢 国际公司官方 RSS ──
+    - name: "OpenAI Blog"
+      url: "https://openai.com/news/rss.xml"
+      category: "foreign_official"
+      enabled: true
+      type: "rss"
+
+    - name: "Google AI Blog"
+      url: "https://blog.google/technology/ai/rss/"
+      category: "foreign_official"
+      enabled: false  # AI 关键词命中率低
+      type: "rss"
+
+    - name: "Stability AI"
+      url: "https://stability.ai/news?format=rss"
+      category: "foreign_official"
+      enabled: false  # feed 空
+      type: "rss"
+
+    # ── 👨‍🔬 研究员 ──
+    - name: "Simon Willison"
+      url: "https://simonwillison.net/atom/everything/"
+      category: "foreign_researcher"
+      enabled: true
+      type: "rss"
+
+    # ── 📄 学术论文 ──
+    - name: "arXiv AI"
+      url: "https://rss.arxiv.org/rss/cs.AI"
+      category: "foreign_researcher"
+      enabled: true
+      type: "rss"
+
+    - name: "arXiv NLP"
+      url: "https://rss.arxiv.org/rss/cs.CL"
+      category: "foreign_researcher"
+      enabled: true
       type: "rss"
 
     # ── 📰 国际媒体 RSS ──
@@ -81,19 +103,19 @@ sources:
     - name: "VentureBeat AI"
       url: "https://venturebeat.com/category/ai/feed/"
       category: "foreign_media"
-      enabled: true
+      enabled: false  # feedparser 无法解析
       type: "rss"
 
     - name: "MIT Tech Review"
       url: "https://www.technologyreview.com/feed/"
       category: "foreign_media"
-      enabled: true
+      enabled: false  # 综合科技，AI 文章少
       type: "rss"
 
     - name: "ArsTechnica"
       url: "https://feeds.arstechnica.com/arstechnica/technology-lab"
       category: "foreign_media"
-      enabled: true
+      enabled: false  # Biz & IT 频道，非 AI 专精
       type: "rss"
 
     - name: "ZDNet AI"
@@ -102,57 +124,41 @@ sources:
       enabled: true
       type: "rss"
 
+    - name: "AI News"
+      url: "https://www.artificialintelligence-news.com/feed/"
+      category: "foreign_media"
+      enabled: false  # 403
+      type: "rss"
+
     - name: "Hacker News AI"
       url: "https://hnrss.org/newest?q=AI+OR+LLM+OR+GPT+OR+machine+learning"
       category: "foreign_media"
       enabled: true
       type: "rss"
 
-    # ── 🌍 国际 AI 专业媒体 ──
-    - name: "AI News"
-      url: "https://www.artificialintelligence-news.com/feed/"
-      category: "foreign_media"
-      enabled: true
+    # ── 备用（可能不稳定）──
+    - name: "机器之心 (Synced)"
+      url: "https://syncedreview.com/feed/"
+      category: "chinese_ai"
+      enabled: false  # 频繁 0 条
       type: "rss"
 
     - name: "MarkTechPost"
       url: "https://www.marktechpost.com/feed/"
       category: "foreign_media"
-      enabled: true
+      enabled: false  # 频繁 403
       type: "rss"
 
-    - name: "Unite.AI"
-      url: "https://www.unite.ai/feed/"
-      category: "foreign_media"
-      enabled: false  # 403 Forbidden
-      type: "rss"
-
-    # ── 📄 学术论文 ──
-    - name: "arXiv AI"
-      url: "https://rss.arxiv.org/rss/cs.AI"
-      category: "foreign_researcher"
-      enabled: true
+    - name: "InfoQ AI"
+      url: "https://www.infoq.cn/feed/ai"
+      category: "chinese_ai"
+      enabled: false  # 国内受限
       type: "rss"
 
   # ============================================
-  #  网页抓取源（11 个）
+  #  网页抓取源（6 个 — 无 RSS 的网站）
   # ============================================
   web_scrape:
-    # ── 🏢 国际大厂官方 ──
-    - name: "OpenAI Blog"
-      url: "https://openai.com/news/"
-      selector: "article, [class*='article'], .post, .blog-post"
-      category: "foreign_official"
-      enabled: true
-      type: "web"
-
-    - name: "Anthropic News"
-      url: "https://www.anthropic.com/news"
-      selector: "article, [class*='article'], .card"
-      category: "foreign_official"
-      enabled: true
-      type: "web"
-
     - name: "Google DeepMind"
       url: "https://deepmind.google/blog/"
       selector: "article, .blog-post, [class*='post']"
@@ -160,9 +166,9 @@ sources:
       enabled: true
       type: "web"
 
-    - name: "Meta AI"
-      url: "https://ai.meta.com/blog/"
-      selector: "article, [class*='article'], .post, .blog-card"
+    - name: "Anthropic News"
+      url: "https://www.anthropic.com/news"
+      selector: "article, [class*='article'], .card"
       category: "foreign_official"
       enabled: true
       type: "web"
@@ -176,16 +182,8 @@ sources:
 
     - name: "Hugging Face Blog"
       url: "https://huggingface.co/blog"
-      selector: "article, [class*='blog'], .post, [class*='post']"
+      selector: "article, [class*='blog'], .post"
       category: "foreign_official"
-      enabled: true
-      type: "web"
-
-    # ── 👨‍🔬 研究员博客 ──
-    - name: "Andrej Karpathy"
-      url: "https://karpathy.ai/"
-      selector: "article, .post, [class*='post']"
-      category: "foreign_researcher"
       enabled: true
       type: "web"
 
@@ -196,32 +194,10 @@ sources:
       enabled: true
       type: "web"
 
-    - name: "Simon Willison"
-      url: "https://simonwillison.net/"
-      selector: "article, .entry, .blog-post"
-      category: "foreign_researcher"
-      enabled: true
-      type: "web"
-
-    - name: "Dario Amodei"
-      url: "https://darioamodei.com/"
-      selector: "article, .post, [class*='essay']"
-      category: "foreign_researcher"
-      enabled: true
-      type: "web"
-
-    # ── 📰 Web 抓取媒体 ──
     - name: "AIbase"
       url: "https://www.aibase.com/zh/news"
       selector: "article, .news-item, .article-item"
       category: "chinese_ai"
-      enabled: true
-      type: "web"
-
-    - name: "The Register AI"
-      url: "https://www.theregister.com/ai/"
-      selector: "article, .story, .news-item, [class*='article']"
-      category: "foreign_media"
       enabled: true
       type: "web"
 
@@ -275,7 +251,7 @@ filter:
   deduplicate: true
 
 ai:
-  api_key: ""                       # 留空自动使用 ANTHROPIC_API_KEY 环境变量
+  api_key: ""
   base_url: "https://api.anthropic.com/v1"
   model: "claude-haiku-4-5-20251001"
   top_n: 20
