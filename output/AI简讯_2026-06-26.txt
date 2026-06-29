@@ -1,47 +1,45 @@
 06月26日，农历六月十二，星期五
 🤖 AI 简讯日报
 
-  1、[英] OpenAI News
-  2、今日热点导览 Anthropic成全球价值最高独角兽，DeepSeek跻身全球独角兽企业前15名 建设银行：将于7月24日日终清算时起关闭代理上海黄金交易所个人
-  3、[英] DiffusionGemma: 4x faster text generation
-  4、[英] Michiel van de Panne
-  5、[英] Scaling Laws, Carefully
-  6、[英] Securing the future of AI agents
-  7、一展两地，链接全球 &nbsp; &nbsp;AIE 电子展成为龙头企业的必选舞台 全球智能制造产业加速演进，粤港澳大湾区正成为打造世界级科技展会的核心阵地。
-  8、雷峰网获悉，6月24日，通用具身智能企业RoboScience机器科学在深圳成功举办通用具身大模型发布会。
-  9、[英] The White House is asking OpenAI to slow roll the release of its new model over 
-  10、文 | 海若镜 访谈 | 海若镜 巴芮 6月盛夏，在清华无锡研究院智能产业创新中心，我们见到了张亚勤院士。他匆匆赶来，一进门，就建议让室内温度降得更低些。
-  11、[英] 英伟达MoE新开源：一行import，微调加速3.7倍
-  12、[英] OpenAI will delay GPT-5.6 after Trump administration request
+  1、GLM-5.2发布，被认为是目前最强大的纯文本开源大语言模型，可能改变开源模型格局。
+  2、Mistral AI推出新智能体Vibe，可长期多步骤工作，处理收件箱、日历、深度研究、起草交付物及编排日常流程，并支持代码开发。
+  3、Mistral AI在AI Now Summit发布工业工程AI栈，集成先进物理模型、工程专业知识和机器人技术，推动工业领域AI应用。
+  4、[英] 在 Gemini 3.5 Flash 中引入计算机使用功能
+  5、[英] DiffusionGemma：文本生成速度提升4倍
+  6、Lilian Weng深入探讨高质量人类数据对深度学习模型训练的关键作用，强调数据质量的重要性。
+  7、据报三星计划投资6480亿美元应对AI浪潮，重塑韩国半导体产业格局。
+  8、白宫因安全担忧要求OpenAI逐步发布新模型GPT-5.6，OpenAI计划仅向特定合作伙伴提供。
+  9、[英] 系列文章
+  10、研究QLORA SFT蒸馏对Qwen3.6 27B模型在代理编码任务流畅度上的影响。
 🤖 本周十大 GitHub 热门项目
 
-  1、calesthio/OpenMontage  [Python] 总⭐23,097 周增⭐15,793
-  World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills.
+  1、calesthio/OpenMontage  [Python] 总⭐22,842 周增⭐15,793
+  全球首个开源智能体视频制作系统。12条流水线、52个工具、500+智能体技能。将AI编程助手变为完整视频工作室。
 
-  2、DeusData/codebase-memory-mcp  [C] 总⭐15,179 周增⭐8,024
-  High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph 
+  2、DeusData/codebase-memory-mcp  [C] 总⭐15,046 周增⭐8,024
+  高性能代码智能MCP服务器。将代码库索引为持久知识图谱，平均仓库毫秒级。支持158种语言，亚毫秒查询，减少99%令牌。单一静态二进制，零依赖。
 
-  3、BuilderIO/agent-native  [TypeScript] 总⭐2,413 周增⭐1,588
-  A framework for building agent-native applications.
+  3、google-research/timesfm  [Python] 总⭐25,612 周增⭐3,040
+  TimesFM是Google Research开发的预训练时间序列基础模型，用于时间序列预测。
 
-  4、kunchenguid/no-mistakes  [Go] 总⭐3,196 周增⭐1,426
-  git push no-mistakes
+  4、koala73/worldmonitor  [TypeScript] 总⭐59,960 周增⭐3,059
+  实时全球情报仪表板。AI驱动新闻聚合、地缘政治监控和基础设施追踪，统一态势感知界面。
 
-  5、penpot/penpot  [Clojure] 总⭐53,891 周增⭐3,379
-  Penpot: The open-source design tool for design and code collaboration
+  5、penpot/penpot  [Clojure] 总⭐53,832 周增⭐3,379
+  Penpot：开源设计工具，实现设计与代码协作。
 
-  6、ZhuLinsen/daily_stock_analysis  [Python] 总⭐49,974 周增⭐6,383
-  LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time 
+  6、jamiepine/voicebox  [TypeScript] 总⭐34,338 周增⭐3,688
+  开源AI语音工作室。克隆、听写、创作。
 
-  7、jamiepine/voicebox  [TypeScript] 总⭐34,389 周增⭐3,688
-  The open-source AI voice studio. Clone, dictate, create.
+  7、asgeirtj/system_prompts_leaks  [JavaScript] 总⭐46,180 周增⭐2,720
+  提取自各AI的系统提示：Anthropic（Claude Fable 5等）、OpenAI（ChatGPT 5.5 Thinking等）、Google（Gemini 3.5 Flash等）、xAI（Grok等）及更多。定期更新。
 
-  8、Panniantong/Agent-Reach  [Python] 总⭐41,933 周增⭐6,830
-  Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu 
+  8、Panniantong/Agent-Reach  [Python] 总⭐41,734 周增⭐6,830
+  为AI智能体赋予看遍互联网的能力。读取搜索Twitter、Reddit、YouTube、GitHub、Bilibili、小红书——一个CLI，零API费用。
 
-  9、koala73/worldmonitor  [TypeScript] 总⭐60,015 周增⭐3,059
-  Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified 
+  9、ZhuLinsen/daily_stock_analysis  [Python] 总⭐49,861 周增⭐6,383
+  LLM驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。
 
-  10、stablyai/orca  [TypeScript] 总⭐7,810 周增⭐1,949
-  Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription.
+  10、OpenCut-app/OpenCut  [TypeScript] 总⭐59,960 周增⭐2,801
+  开源版CapCut替代工具。
 

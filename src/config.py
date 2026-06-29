@@ -53,8 +53,8 @@ DEFAULT_CONFIG = {
     },
     "ai": {
         "api_key": "",
-        "base_url": "https://api.deepseek.com/v1",
-        "model": "deepseek-chat",
+        "base_url": "https://api.anthropic.com/v1",
+        "model": "claude-haiku-4-5-20251001",
         "top_n": 20,
         "batch_size": 10,
         "timeout": 60,
