@@ -1,8 +1,8 @@
-# 🤖 AI 简讯增强版 — AI News Daily Enhanced
+# 🤖 AI 简讯增强版
 
-融合 [ai-news-daily](https://github.com/Zero-Lzy/ai-news-daily)（成熟管道架构）和 [ai-daily-brief](https://github.com/M-qiangZhu/ai-daily-brief)（丰富数据源）两大项目的优势。
+每天自动抓取 28 个 AI 行业数据源 + GitHub 热门项目，生成适合消息推送的精简中文日报。
 
-每天自动抓取 25+ 个 AI 行业数据源，经过过滤和 AI 评分，输出精美的 **Markdown 日报**。
+**核心设计**：Python 只做确定性抓取和过滤，AI 评分、翻译、摘要等智能任务由当前 Agent 通过 [skill](../../.claude/skills/ai-news-daily/SKILL.md) 完成。无需配置任何 API Key，适配 Claude Code / Codex / Cursor 等任意 Agent。
 
 ---
 
@@ -10,13 +10,12 @@
 
 | 特性 | 说明 |
 |------|------|
-| ⏰ **定时抓取** | 默认每天 8:00 + 20:00 自动执行 |
-| 📡 **25+ 数据源** | 国内媒体、大厂官方、研究员博客、国际媒体 |
+| 📡 **28 个数据源** | 国内媒体、大厂官方、研究员博客、国际媒体 |
 | 🔍 **4 道过滤** | 关键词 → 排除词 → 时效性 → 标题去重 |
-| 🧠 **AI 评分** | LLM 智能评分排序 + 规则引擎降级（支持 5 家服务商） |
-| 📝 **精美 Markdown** | 结构化排版、评分可视、分类分组 |
-| 📊 **JSON 数据** | 按日期拆分，支持二次开发 |
-| 🚀 **零成本部署** | GitHub Actions 自动运行，无需服务器 |
+| 🧠 **Agent 智能分析** | 当前 Agent 直接评分、翻译、摘要，无需 API Key |
+| 🔥 **GitHub 热门** | 每周十大热门项目，含星数和中英文描述 |
+| 📱 **消息格式输出** | 纯文本日报，适合钉钉/微信/飞书推送 |
+| 🚀 **零配置** | 无需 API Key，Python 脚本零 AI 依赖 |
 | 🔧 **灵活配置** | YAML + 环境变量覆盖 |
 
 ---
@@ -25,10 +24,10 @@
 
 | 分类 | 来源 |
 |------|------|
-| 🇨🇳 国内 AI 媒体 | 机器之心、量子位、InfoQ AI、新智元、智东西、PaperWeekly、36氪AI、少数派AI、AIbase |
-| 🏢 国际公司官方 | OpenAI Blog、Anthropic、Google DeepMind、Meta AI、Mistral AI |
-| 👨‍🔬 国际研究员 | Andrej Karpathy、Lilian Weng、Simon Willison、Dario Amodei |
-| 📰 国际媒体 | Hacker News、TechCrunch、The Verge、ArsTechnica、The Register、VentureBeat |
+| 🇨🇳 国内 AI 媒体 | 量子位、36氪、雷锋网、少数派、AIbase |
+| 🏢 国际公司官方 | OpenAI Blog、Anthropic、Google DeepMind、Meta AI、Mistral AI、Hugging Face |
+| 👨‍🔬 国际研究员 | Andrej Karpathy、Lilian Weng、Simon Willison、Dario Amodei、arXiv |
+| 📰 国际媒体 | TechCrunch、The Verge、ArsTechnica、ZDNet、Hacker News、VentureBeat、MIT Tech Review |
 
 ---
 
@@ -38,61 +37,35 @@
 cd ai-news-daily-enhanced
 pip install -r requirements.txt
 
-# 立即执行一次抓取
+# 抓取数据（纯确定性，无需 API Key）
 python main.py
 
-# 启动本地定时调度（每天 8:00 + 20:00 自动运行）
-python main.py --schedule
-
-# 指定标签执行
-python main.py --label "晚报"
+# 然后由 Agent 读取 data/latest.json 完成评分翻译输出
 ```
 
-### 启用 AI 智能分析
-
-```bash
-export NEWS_AI_API_KEY="sk-xxxxxxxxxxxxxxxx"
-python main.py
-```
-
-支持的 LLM：DeepSeek（默认）、OpenAI、通义千问、Kimi、零一万物。
+**完整流程**：`python main.py` 抓取 → Agent 读 JSON → 评分 + 翻译 + 格式化 → 输出日报
 
 ---
 
-## 📖 输出示例
+## 📖 输出格式
 
 ```
-# 🤖 AI 行业简讯日报
+06月29日，农历六月十五，星期一
+🤖 AI 简讯日报
 
-> **2026年06月26日 周五** · 🌅 早报 · AI News Daily Enhanced
+  1、马斯克宣布 Grok 4.5 在 SpaceX 与特斯拉启动内部 Beta 测试...
+  2、"物理 AI 第一股"Momenta 正式在港交所开启招股...
+  ...
+  12、arXiv 新论文提出统一智能体训练范式...
 
----
+🤖 本周十大 GitHub 热门项目
 
-## 📊 今日概览
+  1、calesthio/OpenMontage  [Python] 总⭐27,480 周增⭐18,703
+  全球首个开源智能体视频制作系统...
 
-| 指标 | 详情 |
-|------|------|
-| 📄 精选文章 | **20** 篇 |
-| 📡 数据来源 | **13** 个 |
-| ⭐ 最高评分 | **7.2** 分 |
-| 🧠 分析引擎 | 🧠 AI 大模型分析（deepseek-chat）|
-
----
-
-## 🇨🇳 国内 AI 媒体
-
-> 共 **2** 篇
-
-**1.** `7.2分` ★★★★  [文章标题](https://example.com)
-
-> 📡 机器之心 · 🕐 2026-06-26 08:30
->
-> 摘要内容...
-
-> `███████░░░`
-
-**2.** `5.8分` ★★★  [另一篇文章](https://example.com)
-...
+  2、DeusData/codebase-memory-mcp  [C] 总⭐20,231 周增⭐8,926
+  高性能代码智能 MCP 服务器...
+  ...
 ```
 
 ---
@@ -112,13 +85,9 @@ sources:
   rss_feeds:
     - name: "我的源"
       url: "https://example.com/feed.xml"
+      category: "chinese_ai"
       enabled: true
-
-# 调整 AI 分析
-ai:
-  api_key: ""                    # 留空则使用规则降级
-  model: "deepseek-chat"
-  top_n: 20
+      type: "rss"
 
 # 过滤关键词
 filter:
@@ -126,30 +95,25 @@ filter:
   keywords_exclude: ["广告", "促销"]
 ```
 
-环境变量覆盖：`NEWS_AI__TOP_N=30` → `ai.top_n = 30`
-
 ---
 
 ## 📂 项目结构
 
 ```
 ai-news-daily-enhanced/
-├── main.py                  # 主入口
+├── main.py                  # 主入口（抓取+过滤+保存）
 ├── requirements.txt
-├── config/settings.yaml     # 全局配置
+├── config/settings.yaml     # 全局配置（28 数据源）
 ├── src/
-│   ├── models.py            # Article dataclass
-│   ├── config.py            # 配置管理器
-│   ├── fetcher.py           # 增强抓取引擎
-│   ├── filter.py            # 4 道过滤器
-│   ├── ai_analyzer.py       # AI 智能评分
-│   ├── writer.py            # Markdown 生成器
-│   ├── json_writer.py       # JSON 输出器
-│   └── scheduler.py         # 定时调度
+│   ├── models.py            # Article / Source dataclass
+│   ├── config.py            # YAML 配置管理器
+│   ├── fetcher.py           # 抓取引擎（RSS + Web + jina.ai 降级）
+│   ├── filter.py            # 4 道过滤
+│   └── github_trending.py   # GitHub Trending 抓取
 ├── .github/workflows/
-│   └── fetch-news.yml       # CI/CD 自动运行
-├── data/                    # JSON 数据输出
-├── output/                  # Markdown 日报输出
+│   └── fetch-news.yml       # CI/CD 定时运行
+├── data/                    # 抓取数据（JSON）
+├── output/                  # 日报输出（TXT）
 └── logs/                    # 运行日志
 ```
 
@@ -158,8 +122,3 @@ ai-news-daily-enhanced/
 ## 📜 License
 
 MIT License
-
-## 🙏 致谢
-
-- [ai-news-daily](https://github.com/Zero-Lzy/ai-news-daily) — 管道架构、AI 分析
-- [ai-daily-brief](https://github.com/M-qiangZhu/ai-daily-brief) — 数据源覆盖、抓取策略
